@@ -31,7 +31,7 @@ public class HystrixController {
 		} catch(Exception e) {
 			
 		}
-		return Arrays.asList("orange");
+		return Arrays.asList("orange", "apple");
 	}
 }
 
