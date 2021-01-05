@@ -1,5 +1,5 @@
 server: 
-  port: ${server_port:8002}
+  port: ${server_port:8003}
 spring: 
   application: 
     name: hystrix-service-springcloud 
@@ -7,6 +7,6 @@ spring:
     config: 
       uri: ${config_servers:http://localhost:9001} 
       searchPath: ${spring.application.name}
-  config: 
+  profiles: 
     active: ${profile:local}
     include: common 

@@ -9,7 +9,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class HystrixServiceSpringcloudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HystrixServiceSpringcloudApplication.class, args);
+		SpringApplication.run(HystrixServiceSpringcloudApplication.class, args);		
+		
 	}
 
 }
