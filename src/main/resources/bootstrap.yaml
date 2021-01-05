@@ -1,5 +1,5 @@
 server: 
-  port: ${server_port:8003}
+  port: ${service_port:8003}
 spring: 
   application: 
     name: hystrix-service-springcloud 
