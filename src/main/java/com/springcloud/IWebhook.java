@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@FeignClient( name="webhook", url="http://webhook-springcloud.169.56.84.41.nip.io" )
+@FeignClient( name="webhook", url="${webhook_url:http://localhost:9999}" )
 public interface IWebhook {
 	@GetMapping("/greeting/{param}")
     @ApiOperation(value="Get Greeting message")
