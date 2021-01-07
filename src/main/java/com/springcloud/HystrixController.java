@@ -3,6 +3,7 @@ package com.springcloud;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,8 +31,18 @@ public class HystrixController {
 			Thread.sleep(30);
 		} catch(Exception e) {
 			
-		}
-		return Arrays.asList("orange", "apple");
+		}		
+		
+		return Arrays.asList("orange", "apple", getGreeting());
 	}
+	
+	@Autowired
+	private IWebhook webhook;
+	private String getGreeting() {
+		String greeting = webhook.getGreeting("Hello");
+		return greeting;
+	}
+	
+	
 }
 
